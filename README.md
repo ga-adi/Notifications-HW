@@ -1,11 +1,11 @@
 ---
-title: Notifications Lab
+title: Notifications Homework
 type: lab
 duration: "1:00"
 creator: James Davis (NYC)
 ---
 
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Notifications Lab
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Notifications Homework
 
 ## Introduction
 
