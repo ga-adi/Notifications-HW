@@ -19,7 +19,7 @@ Below, you should find 9 types of notifications. Many are very similar.
 
 If you are on a team of two, you are expected to create **6** of the notifications. If you are on a team of three, you are expected to create all **9** notifications.
 
-You will be given starter code, 9 buttons that have no logic connected to them. In the end, clicking on each botton will show a new notification.
+You will have to create an activity with 9 buttons. In the end, clicking on each botton will show a new notification.
 
 <img src="screenshots/notification1.jpg" width="400px" />
 <img src="screenshots/notification2.jpg" width="400px" />
@@ -41,12 +41,15 @@ The bonus is to implement the final notification with a custom layout.
 - 
 
 **Bonus:**
-- For the notifications that have actions, have the 
+- For the notifications that have actions, have them open a *new* activity.
+- Implement the music playing notification. The notification buttons do not have to do anything.
 
 #### Deliverable
 
-One app per chosen screenshot that has the Toolbar UI implemented.
+An Android Studio project of the described app, with at least one screen with at least 9 buttons that show different notifications.
 
 ## Additional Resources
 
-- [Toolbars](http://developer.android.com/training/appbar/index.html)
+- [Notifications Lesson](https://github.com/ga-adi/adi-nyc-cheesecake/tree/master/resources/07-android-technologies-and-services/notifications-lesson)
+- [Notifications | Android Developrt Guide](http://developer.android.com/guide/topics/ui/notifiers/notifications.html)
+
