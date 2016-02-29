@@ -68,9 +68,6 @@ public class CharlieNotifications {
         PendingIntent pendingIntent = PendingIntent.getActivity(
                 context, (int) System.currentTimeMillis(), intent, 0);
 
-        //builder.setContentIntent(pendingIntent);
-        //builder.setAutoCancel(true);
-
         builder.addAction(R.drawable.ic_archive_grey_500_18dp, "ARCHIVE", pendingIntent);
         builder.addAction(R.drawable.ic_reply_grey_500_18dp, "REPLY", pendingIntent);
 
