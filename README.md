@@ -21,9 +21,20 @@ If you are on a team of two, you are expected to create **6** of the notificatio
 
 You will be given starter code, 9 buttons that have no logic connected to them. In the end, clicking on each botton will show a new notification.
 
-
+<img src="screenshots/notification1.jpg" width="400px" />
+<img src="screenshots/notification2.jpg" width="400px" />
+<img src="screenshots/notification3.jpg" width="400px" />
+<img src="screenshots/notification4.jpg" width="400px" />
+<img src="screenshots/notification5.jpg" width="400px" />
+<img src="screenshots/notification6.jpg" width="400px" />
+<img src="screenshots/notification7.jpg" width="400px" />
+<img src="screenshots/notification8.jpg" width="400px" />
+<img src="screenshots/notification9.jpg" width="400px" />
 
 The bonus is to implement the final notification with a custom layout.
+
+<img src="screenshots/notification_bonus.jpg" width="400px" />
+
 
 #### Requirements
 
