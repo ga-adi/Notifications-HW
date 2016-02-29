@@ -38,7 +38,7 @@ The bonus is to implement the final notification with a custom layout.
 
 #### Requirements
 
-- 
+- An activity that has 9 buttons, with each button showing the different notifications.
 
 **Bonus:**
 - For the notifications that have actions, have them open a *new* activity.
@@ -51,5 +51,5 @@ An Android Studio project of the described app, with at least one screen with at
 ## Additional Resources
 
 - [Notifications Lesson](https://github.com/ga-adi/adi-nyc-cheesecake/tree/master/resources/07-android-technologies-and-services/notifications-lesson)
-- [Notifications | Android Developrt Guide](http://developer.android.com/guide/topics/ui/notifiers/notifications.html)
+- [Notifications | Android Development Guide](http://developer.android.com/guide/topics/ui/notifiers/notifications.html)
 
