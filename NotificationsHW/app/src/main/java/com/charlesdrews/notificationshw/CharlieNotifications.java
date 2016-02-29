@@ -50,4 +50,31 @@ public class CharlieNotifications {
         NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         manager.notify(2, builder.build());
     }
+
+    public static void michaelEmailNotification(Context context) {
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
+
+        builder.setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.img_20151212_124741_edit_small));
+        builder.setSmallIcon(R.drawable.ic_email_white_18dp);
+
+        NotificationCompat.BigTextStyle style = new NotificationCompat.BigTextStyle();
+        style.setBigContentTitle("Michael");
+        style.bigText("Dinner tonight?\nLet's grab some dinner. Are you free?");
+        style.setSummaryText("alex.faa.borg@android.com");
+        builder.setStyle(style);
+
+
+        Intent intent = new Intent(context, context.getClass());
+        PendingIntent pendingIntent = PendingIntent.getActivity(
+                context, (int) System.currentTimeMillis(), intent, 0);
+
+        //builder.setContentIntent(pendingIntent);
+        //builder.setAutoCancel(true);
+
+        builder.addAction(R.drawable.ic_archive_grey_500_18dp, "ARCHIVE", pendingIntent);
+        builder.addAction(R.drawable.ic_reply_grey_500_18dp, "REPLY", pendingIntent);
+
+        NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.notify(3, builder.build());
+    }
 }

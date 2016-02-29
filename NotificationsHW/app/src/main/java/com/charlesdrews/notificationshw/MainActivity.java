@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.greg_miller_button).setOnClickListener(this);
+
+        CharlieNotifications.michaelEmailNotification(this);
     }
 
     @Override
