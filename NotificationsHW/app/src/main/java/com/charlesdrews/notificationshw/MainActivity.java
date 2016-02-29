@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.greg_miller_button:
-                CharlieNotifications.gregMillerNotifiction(this);
+                CharlieNotifications.gregMillerNotification(this);
                 break;
         }
     }
