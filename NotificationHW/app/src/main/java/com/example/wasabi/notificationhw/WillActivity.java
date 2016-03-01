@@ -65,7 +65,7 @@ public class WillActivity extends AppCompatActivity {
                 builderScreenshot.addAction(android.R.drawable.ic_menu_delete, "Delete", null);
                 Notification notification2 = builderScreenshot.build();
                 NotificationManager notificationManager2 = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-                notificationManager2.notify(1,notification2);
+                notificationManager2.notify(2,notification2);
 
             }
         });
@@ -89,7 +89,7 @@ public class WillActivity extends AppCompatActivity {
 
                 Notification notification = builderScreenshot.build();
                 NotificationManager notificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
-                notificationManager.notify(2,notification);
+                notificationManager.notify(3,notification);
 
             }
         });

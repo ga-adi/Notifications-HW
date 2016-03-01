@@ -32,6 +32,13 @@ public class ClaireActivity extends AppCompatActivity {
         Button bonusButton = (Button)findViewById(R.id.bonus_button);
         Button nextButton = (Button)findViewById(R.id.next_button);
 
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ClaireActivity.this, WillActivity.class));
+            }
+        });
+
         inboxButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -148,7 +155,7 @@ public class ClaireActivity extends AppCompatActivity {
                 builder.setAutoCancel(true);
 
                 NotificationManager notificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
-                notificationManager.notify(ACTION_NOTIFICATION_ID,builder.build());
+                notificationManager.notify(BONUS_NOTIFICATION_ID,builder.build());
             }
         });
     }
