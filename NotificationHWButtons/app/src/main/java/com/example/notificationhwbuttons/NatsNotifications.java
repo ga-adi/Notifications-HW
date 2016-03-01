@@ -37,7 +37,7 @@ public class NatsNotifications {
     }
     public void createNotificationUSBDebggingConnected(){
         NotificationCompat.Builder builder = new NotificationCompat.Builder(mActivity);
-        builder.setSmallIcon(R.drawable.usbdebug_icon);
+        builder.setSmallIcon(R.drawable.usbdebug);
         builder.setContentTitle("USB DEBUGGING CONNECTED");
         builder.setContentText("Touch to Disable USB Debugging");
 
@@ -55,7 +55,7 @@ public class NatsNotifications {
 
     public void createNotificationUSBGregMiller(){
         NotificationCompat.Builder builder = new NotificationCompat.Builder(mActivity);
-        builder.setSmallIcon( R.drawable.gregmiller_icon);
+        builder.setSmallIcon( R.drawable.gregmiller);
        // builder.setContentTitle("Greg Miller");
         //builder.setContentText("Like");
 
