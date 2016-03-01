@@ -4,6 +4,7 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -87,12 +88,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 NotificationCompat.Builder builder4 = new NotificationCompat.Builder(MainActivity.this);
+                builder4.setSmallIcon(android.R.drawable.ic_menu_info_details);
                 builder4.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.gregmiller));
-
                 NotificationCompat.BigTextStyle bigText = new NotificationCompat.BigTextStyle();
                 bigText.bigText("Liked: Tim: It's cool that the @BatmanvSuperman movie cast the guy from Gigli.\n@GameOverGreggy: Are you srsly making a joke right now, Tim?");
                 builder4.setStyle(bigText);
-
                 Intent notificationIntent = new Intent(MainActivity.this, MainActivity.class);
                 PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, (int) System.currentTimeMillis(), notificationIntent, 0);
                 builder4.setContentIntent(pendingIntent).setAutoCancel(true);
@@ -106,8 +106,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 NotificationCompat.Builder builder5 = new NotificationCompat.Builder(MainActivity.this);
-                builder5.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.clearnotifications))
-                        .setContentTitle("Clear Notifications");
+                builder5.setSmallIcon(android.R.drawable.ic_menu_info_details);
+                builder5.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.clearnotifications));
+                builder5.setContentTitle("Clear Notifications");
                 Intent notificationIntent = new Intent(MainActivity.this, MainActivity.class);
                 PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, (int) System.currentTimeMillis(), notificationIntent, 0);
                 builder5.setContentIntent(pendingIntent)
@@ -122,7 +123,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 NotificationCompat.Builder builder6 = new NotificationCompat.Builder(MainActivity.this);
+                builder6.setSmallIcon(android.R.drawable.ic_menu_info_details);
                 builder6.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.largealert));
+                builder6.setAutoCancel(true);
 
                 NotificationCompat.InboxStyle inboxStyle = new NotificationCompat.InboxStyle();
                 inboxStyle.setBigContentTitle("5 new messages");
@@ -134,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent notificationIntent = new Intent(MainActivity.this, MainActivity.class);
                 PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, (int) System.currentTimeMillis(), notificationIntent, 0);
-                builder6.setContentIntent(pendingIntent).setAutoCancel(true);
+                builder6.setContentIntent(pendingIntent);
                 Notification notification = builder6.build();
                 NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                 notificationManager.notify(6, notification);
@@ -145,8 +148,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Notification.Builder builder7 = new Notification.Builder(MainActivity.this);
-                Notification notification = builder7.build();
-                notification.flags |= Notification.FLAG_NO_CLEAR;
                 NotificationManager mNotificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
 
                 RemoteViews contentView = new RemoteViews(getPackageName(), R.xml.customnotificationlayout);
@@ -155,7 +156,10 @@ public class MainActivity extends AppCompatActivity {
                 contentView.setTextViewText(R.id.text, "Adele - Pay Close...");
                 contentView.setImageViewResource(R.id.pause, android.R.drawable.ic_media_pause);
                 contentView.setImageViewResource(R.id.skip, android.R.drawable.ic_media_next);
-                notification.contentView = contentView;
+                builder7.setContent(contentView);
+                builder7.setSmallIcon(android.R.drawable.alert_light_frame);
+                Notification notification = builder7.build();
+                notification.flags |= Notification.FLAG_NO_CLEAR;
 
                 Intent notificationIntent = new Intent(MainActivity.this, MainActivity.class);
                 PendingIntent contentIntent = PendingIntent.getActivity(MainActivity.this, (int) System.currentTimeMillis(), notificationIntent, 0);
