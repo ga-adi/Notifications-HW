@@ -21,7 +21,7 @@
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|start"
+        android:layout_gravity="top|left"
         android:id="@+id/seamless_fab"
         android:layout_margin="@dimen/fab_margin"
         android:src="@android:drawable/ic_menu_directions"/>
@@ -33,5 +33,29 @@
         android:layout_margin="@dimen/fab_margin"
         android:id="@+id/dinner_with_mike_fab"
         android:src="@android:drawable/ic_menu_camera"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|left"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_lock_idle_lock" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|right"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_menu_compass" />
 
 </android.support.design.widget.CoordinatorLayout>
