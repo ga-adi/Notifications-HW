@@ -140,10 +140,9 @@ public class MainActivity extends AppCompatActivity {
         //TODO: END TOP THREE
 
 
-        ///
-        ///
-        ///
-
+        //
+        //
+        //
 
         //TODO: BOTTOM THREE FOR CHRIS
 
