@@ -9,8 +9,27 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.adi.ho.jackie.notificationshw.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/instagram_note"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Instagram Note"/>
+    <Button
+        android:id="@+id/screenshot_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ScreenShot"
+        android:layout_below="@id/instagram_note"/>
+    <Button
+        android:id="@+id/new_messages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 new messages"
+        android:layout_below="@id/screenshot_note"/>
+    <Button
+        android:id="@+id/music_player_notif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_messages"
+        android:text="Bonus Music Player"/>
 </RelativeLayout>
