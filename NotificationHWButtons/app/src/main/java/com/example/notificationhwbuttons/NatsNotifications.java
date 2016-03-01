@@ -5,6 +5,7 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.support.v4.app.NotificationCompat;
 
 /**
@@ -40,6 +41,7 @@ public class NatsNotifications {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(mActivity);
 
         builder.setSmallIcon(R.drawable.usbdebug);
+        builder.setLargeIcon(BitmapFactory.decodeResource(mActivity.getResources(), R.drawable.usbdebug));
 
         builder.setContentTitle("USB DEBUGGING CONNECTED");
         builder.setContentText("Touch to Disable USB Debugging");
@@ -59,8 +61,8 @@ public class NatsNotifications {
     public void createNotificationUSBGregMiller(){
         NotificationCompat.Builder builder = new NotificationCompat.Builder(mActivity);
 
-        builder.setSmallIcon( R.drawable.gregmiller);
-
+        builder.setSmallIcon(android.R.drawable.ic_menu_share);
+        builder.setLargeIcon(BitmapFactory.decodeResource(mActivity.getResources(), R.drawable.gregmiller));
        // builder.setContentTitle("Greg Miller");
         //builder.setContentText("Like");
 

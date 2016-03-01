@@ -114,5 +114,32 @@ public class MainActivity extends AppCompatActivity {
                 notificationManager.notify(3, notification);
             }
         });
+
+        Button natButton1 = (Button)findViewById(R.id.natButton4);
+        natButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NatsNotifications nn = new NatsNotifications(MainActivity.this);
+                nn.createNotificationTestTitle();
+            }
+        });
+
+        Button natButton2 = (Button)findViewById(R.id.natButton5);
+        natButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NatsNotifications nn = new NatsNotifications(MainActivity.this);
+                nn.createNotificationUSBGregMiller();
+            }
+        });
+
+        Button natButton3 = (Button)findViewById(R.id.natButton6);
+        natButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NatsNotifications nn = new NatsNotifications(MainActivity.this);
+                nn.createNotificationUSBDebggingConnected();
+            }
+        });
     }
 }
