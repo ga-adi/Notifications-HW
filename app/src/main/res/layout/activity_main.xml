@@ -12,45 +12,24 @@
     tools:context="com.roberterrera.notifications_hw.MainActivity">
 
     <Button
-        android:id="@+id/"
+        android:id="@+id/button_testtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="Test Title"
         android:layout_margin="10dp"/>
 
     <Button
-        android:id="@+id/"
+        android:id="@+id/button_usbdebugging"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="USB Debugging"
         android:layout_margin="10dp"/>
 
     <Button
-        android:id="@+id/"
+        android:id="@+id/button_twitter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:layout_margin="10dp"/>
-
-    <Button
-        android:id="@+id/"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_margin="10dp"/>
-
-    <Button
-        android:id="@+id/"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_margin="10dp"/>
-
-    <Button
-        android:id="@+id/"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
+        android:text="Twitter"
         android:layout_margin="10dp"/>
 
 
