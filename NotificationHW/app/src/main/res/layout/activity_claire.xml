@@ -1,16 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.wasabi.notificationhw.ClaireActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/inbox_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:text="INBOX"
+        style="?attr/borderlessButtonStyle"
+        android:textColor="#00bfc9"/>
+    <Button
+        android:id="@+id/bigtext_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BIGTEXT"
+        style="?attr/borderlessButtonStyle"
+        android:textColor="#00bfc9"/>
+    <Button
+        android:id="@+id/action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACTION"
+        style="?attr/borderlessButtonStyle"
+        android:textColor="#00bfc9"/>
+    <Button
+        android:id="@+id/bonus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BONUS"
+        style="?attr/borderlessButtonStyle"
+        android:textColor="#00bfc9"/>
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TO NEXT ACTIVITY"
+        style="?attr/borderlessButtonStyle"
+        android:textColor="#00bfc9"/>
+
+</LinearLayout>
