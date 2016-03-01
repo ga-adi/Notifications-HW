@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:src="@android:drawable/ic_input_add"
+        android:src="@android:drawable/stat_notify_chat"
         android:layout_alignTop="@+id/fabScreenShot"
         android:layout_centerHorizontal="true" />
 
