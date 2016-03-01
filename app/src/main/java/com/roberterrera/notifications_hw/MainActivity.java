@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Button mInstagram;
     Button mScreenshot;
     Button m5messages;
-    Button mClear;
+
 
 
     @Override
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mInstagram=(Button)findViewById(R.id.instagram);
         mScreenshot=(Button)findViewById(R.id.screenshot);
         m5messages=(Button)findViewById(R.id.new_messages_5);
-        mClear=(Button)findViewById(R.id.clear_notifications);
+
 
         mInstagram.setOnClickListener(new View.OnClickListener() {
             @Override
