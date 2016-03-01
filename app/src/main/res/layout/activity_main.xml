@@ -12,46 +12,33 @@
     tools:context="com.roberterrera.notifications_hw.MainActivity">
 
     <Button
-        android:id="@+id/"
+        android:id="@+id/instagram"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:layout_margin="10dp"/>
 
     <Button
-        android:id="@+id/"
+        android:id="@+id/screenshot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:layout_margin="10dp"/>
 
     <Button
-        android:id="@+id/"
+        android:id="@+id/new_messages_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:layout_margin="10dp"/>
 
     <Button
-        android:id="@+id/"
+        android:id="@+id/clear_notifications"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:layout_margin="10dp"/>
 
-    <Button
-        android:id="@+id/"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_margin="10dp"/>
-
-    <Button
-        android:id="@+id/"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_margin="10dp"/>
 
 
 </LinearLayout>
