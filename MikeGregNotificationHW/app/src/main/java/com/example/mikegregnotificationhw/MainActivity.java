@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                 Notification.Builder builder7 = new Notification.Builder(MainActivity.this);
                 NotificationManager mNotificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
 
-                RemoteViews contentView = new RemoteViews(getPackageName(), R.xml.customnotificationlayout);
+                RemoteViews contentView = new RemoteViews(getPackageName(), R.layout.customnotificationlayout);
                 contentView.setImageViewResource(R.id.image, R.drawable.bonus);
                 contentView.setTextViewText(R.id.title, "Rolling in the deep");
                 contentView.setTextViewText(R.id.text, "Adele - Pay Close...");
