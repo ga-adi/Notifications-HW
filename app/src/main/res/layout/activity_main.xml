@@ -19,10 +19,24 @@
         android:layout_margin="10dp"/>
 
     <Button
+        android:id="@+id/instagram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instagram"
+        android:layout_margin="10dp"/>
+
+    <Button
         android:id="@+id/button_usbdebugging"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="USB Debugging"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/screenshot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Screenshot"
         android:layout_margin="10dp"/>
 
     <Button
@@ -32,5 +46,18 @@
         android:text="Twitter"
         android:layout_margin="10dp"/>
 
+    <Button
+        android:id="@+id/new_messages_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Messages"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/clear_notifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:layout_margin="10dp"/>
 
 </LinearLayout>
