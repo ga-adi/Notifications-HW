@@ -19,6 +19,13 @@ public class KyleNotifications extends AppCompatActivity{
         testBuilder.setContentTitle("This is a test title");
         testBuilder.setContentText("This is some text used for the content of this notification.");
 
+        Intent intent = new Intent(context, context.getClass());
+        PendingIntent pendingIntent = PendingIntent.getActivity(
+                context, (int) System.currentTimeMillis(), intent, 0);
+
+        testBuilder.setContentIntent(pendingIntent);
+        testBuilder.setAutoCancel(true);
+
         Notification notification = testBuilder.build();
         NotificationManager manager = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
         manager.notify(1, notification);
@@ -30,6 +37,13 @@ public class KyleNotifications extends AppCompatActivity{
         debugBuilder.setContentTitle("USB debugging connected");
         debugBuilder.setContentText("Touch to disable USB debugging");
 
+        Intent intent = new Intent(context, context.getClass());
+        PendingIntent pendingIntent = PendingIntent.getActivity(
+                context, (int) System.currentTimeMillis(), intent, 0);
+
+        debugBuilder.setContentIntent(pendingIntent);
+        debugBuilder.setAutoCancel(true);
+
         Notification notification = debugBuilder.build();
         NotificationManager manager = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
         manager.notify(2, notification);
@@ -40,7 +54,7 @@ public class KyleNotifications extends AppCompatActivity{
 
         String message = "Calm down, you'll get your food soon.";
         Intent intent = new Intent(context, ActionActivity.class);
-        intent.putExtra("seamless", message);
+        intent.putExtra(MainActivity.MESSAGE_KEY, message);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(context, (int) System.currentTimeMillis(), intent, 0);
 

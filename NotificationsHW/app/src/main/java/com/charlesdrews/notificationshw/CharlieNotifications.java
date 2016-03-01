@@ -64,12 +64,17 @@ public class CharlieNotifications {
         builder.setStyle(style);
 
 
-        Intent intent = new Intent(context, context.getClass());
-        PendingIntent pendingIntent = PendingIntent.getActivity(
-                context, (int) System.currentTimeMillis(), intent, 0);
+        Intent intentArchive = new Intent(context, ActionActivity.class);
+        intentArchive.putExtra(MainActivity.MESSAGE_KEY, "You archived Michael's email without even reading it!");
+        PendingIntent pendingIntentArchive = PendingIntent.getActivity(
+                context, (int) System.currentTimeMillis(), intentArchive, 0);
+        builder.addAction(R.drawable.ic_archive_grey_500_18dp, "ARCHIVE", pendingIntentArchive);
 
-        builder.addAction(R.drawable.ic_archive_grey_500_18dp, "ARCHIVE", pendingIntent);
-        builder.addAction(R.drawable.ic_reply_grey_500_18dp, "REPLY", pendingIntent);
+        Intent intentReply = new Intent(context, ActionActivity.class);
+        intentReply.putExtra(MainActivity.MESSAGE_KEY, "You're going to reply to Michael; how nice.");
+        PendingIntent pendingIntentReply = PendingIntent.getActivity(
+                context, (int) System.currentTimeMillis(), intentReply, 0);
+        builder.addAction(R.drawable.ic_reply_grey_500_18dp, "REPLY", pendingIntentReply);
 
         NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         manager.notify(3, builder.build());

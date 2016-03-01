@@ -8,8 +8,38 @@
     tools:context="com.charlesdrews.notificationshw.MainActivity">
 
     <Button
+        android:id="@+id/test_title_button"
+        android:text="Test Title"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/debug_conntect_button"
+        android:text="USB Debugging"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/seamless_button"
+        android:text="Seamless"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content" />
+
+    <Button
         android:id="@+id/greg_miller_button"
         android:text="Greg Miller"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/clear_notifications_button"
+        android:text="Clear Notifications"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/michael_button"
+        android:text="Michael Email"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content" />
 </LinearLayout>

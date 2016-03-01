@@ -15,7 +15,7 @@ public class ActionActivity extends AppCompatActivity {
         mTextView = (TextView)findViewById(R.id.textView);
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra("seamless");
+        String message = intent.getStringExtra(MainActivity.MESSAGE_KEY);
 
         mTextView.setText(message);
 
