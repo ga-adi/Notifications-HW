@@ -145,8 +145,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Notification.Builder builder7 = new Notification.Builder(MainActivity.this);
-                builder7.setAutoCancel(true);
                 Notification notification = builder7.build();
+                notification.flags |= Notification.FLAG_NO_CLEAR;
                 NotificationManager mNotificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
 
                 RemoteViews contentView = new RemoteViews(getPackageName(), R.xml.customnotificationlayout);
