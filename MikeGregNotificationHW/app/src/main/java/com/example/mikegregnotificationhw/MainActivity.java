@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 notificationManager.notify(3, notification);
             }
         });
+
         mButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
