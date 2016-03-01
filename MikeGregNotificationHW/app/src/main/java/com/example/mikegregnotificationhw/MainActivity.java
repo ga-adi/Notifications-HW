@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         mButton1.setText("Test Notification");
         mButton2.setText("Debugging");
-        mButton3.setText("");
+        mButton3.setText("Seamless");
         mButton4.setText("");
         mButton5.setText("");
         mButton6.setText("");
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 NotificationCompat.Builder builder2 = new NotificationCompat.Builder(MainActivity.this);
-                builder2.setSmallIcon(android.R.drawable.ic_secure)
+                builder2.setSmallIcon(android.R.drawable.ic_media_play)
                         .setContentTitle("USB debugging connected")
                         .setContentText("Touch to disable USB debugging.");
                 Intent notificationIntent = new Intent(MainActivity.this, MainActivity.class);
@@ -74,7 +74,21 @@ public class MainActivity extends AppCompatActivity {
         mButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                NotificationCompat.BigTextStyle bigTextStyle = new NotificationCompat.BigTextStyle();
+                bigTextStyle.setBigContentTitle("94833")
+                        .bigText("Breaking News: Your Seamless order is being prepared. Our crystal ball estimates your delivery time between 1:30PM and 1:40PM.");
 
+                NotificationCompat.Builder builder3 = new NotificationCompat.Builder(MainActivity.this);
+                Intent notificationIntent = new Intent(MainActivity.this, MainActivity.class);
+                PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, (int) System.currentTimeMillis(), notificationIntent, 0);
+                builder3.setSmallIcon(android.R.drawable.ic_menu_gallery)
+                        .addAction(android.R.drawable.ic_menu_add,"REPLY",pendingIntent)
+                        .setStyle(bigTextStyle);
+                builder3.setContentIntent(pendingIntent)
+                        .setAutoCancel(true);
+                Notification notification = builder3.build();
+                NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                notificationManager.notify(3, notification);
             }
         });
         mButton4.setOnClickListener(new View.OnClickListener() {
