@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     Button screenshotBut;
     Button newMessageBut;
     Button musicPlayerBut;
+    Button testMessageBut;
+    Button usbDebugBut;
+    Button breakingNewsBut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +31,10 @@ public class MainActivity extends AppCompatActivity {
         instagramBut = (Button) findViewById(R.id.instagram_note);
         screenshotBut = (Button) findViewById(R.id.screenshot_note);
         newMessageBut = (Button) findViewById(R.id.new_messages);
-        musicPlayerBut = (Button)findViewById(R.id.music_player_notif);
+        musicPlayerBut = (Button) findViewById(R.id.music_player_notif);
+        testMessageBut = (Button) findViewById(R.id.test_notification);
+        usbDebugBut = (Button) findViewById(R.id.usb_debugging);
+        breakingNewsBut = (Button) findViewById(R.id.breaking_news);
 
         final NotificationCompat.Builder noteBuilder = new NotificationCompat.Builder(MainActivity.this);
         final Intent realIntent = new Intent(MainActivity.this, BonusActivity.class);
@@ -89,13 +95,13 @@ public class MainActivity extends AppCompatActivity {
         musicPlayerBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RemoteViews contentView = new RemoteViews(getPackageName(),R.layout.custom_notification_layout);
+                RemoteViews contentView = new RemoteViews(getPackageName(), R.layout.custom_notification_layout);
 
                 contentView.setTextViewText(R.id.album_name, "Rolling In The Deep");
                 contentView.setTextViewText(R.id.song_name, "Adele - Pay Close Attent...");
                 contentView.setImageViewResource(R.id.pause, android.R.drawable.ic_media_pause);
-                contentView.setImageViewResource(R.id.fastforward,android.R.drawable.ic_media_ff);
-                contentView.setImageViewResource(R.id.exit,android.R.drawable.ic_menu_close_clear_cancel);
+                contentView.setImageViewResource(R.id.fastforward, android.R.drawable.ic_media_ff);
+                contentView.setImageViewResource(R.id.exit, android.R.drawable.ic_menu_close_clear_cancel);
 
                 noteBuilder.setContent(contentView);
                 noteBuilder.setSmallIcon(android.R.drawable.ic_media_play);
@@ -106,6 +112,56 @@ public class MainActivity extends AppCompatActivity {
                 notification.contentView = contentView;
                 NotificationManager notiManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                 notiManager.notify(1004, notification);
+            }
+        });
+
+        testMessageBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                noteBuilder.setContentTitle("This is a test title");
+                noteBuilder.setContentText("This is some text used for the content of this notification");
+                noteBuilder.setSmallIcon(android.R.drawable.ic_lock_idle_lock);
+                noteBuilder.setColor(Color.GRAY);
+                noteBuilder.setContentIntent(goToActivityPendingIntent);
+
+                Notification notification = noteBuilder.build();
+                NotificationManager notiManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                notiManager.notify(1005, notification);
+            }
+        });
+
+        breakingNewsBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                noteBuilder.setContentTitle("94833");
+                noteBuilder.setContentText("Breakings News: Your seamless order is being prepared." +
+                        "Our crystall ball estimates your delivery time to between 1:30 and 1:40 PM.");
+                noteBuilder.setLargeIcon(BitmapFactory.decodeResource(getResources(), android.R.drawable.star_on));
+                noteBuilder.setSmallIcon(android.R.drawable.stat_notify_sdcard_usb);
+                noteBuilder.setContentIntent(goToActivityPendingIntent);
+                noteBuilder.setColor(Color.GREEN);
+                noteBuilder.addAction(android.R.drawable.sym_action_call,"REPLY",goToActivityPendingIntent);
+
+                Notification notification = noteBuilder.build();
+                NotificationManager notiManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                notiManager.notify(1006, notification);
+
+            }
+        });
+
+        usbDebugBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                noteBuilder.setContentTitle("USB debugging connected");
+                noteBuilder.setContentText("Touch to disable USB debugging");
+                noteBuilder.setSmallIcon(android.R.drawable.sym_action_chat);
+                noteBuilder.setLargeIcon(null);
+                noteBuilder.setContentIntent(goToActivityPendingIntent);
+
+                Notification notification = noteBuilder.build();
+                NotificationManager notiManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                notiManager.notify(1007, notification);
+
             }
         });
 

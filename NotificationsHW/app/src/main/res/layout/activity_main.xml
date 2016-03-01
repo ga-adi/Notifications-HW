@@ -32,4 +32,25 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/new_messages"
         android:text="Bonus Music Player"/>
-</RelativeLayout>
+    <Button
+        android:id="@+id/test_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test Notification"
+        android:layout_below="@id/music_player_notif"/>
+
+
+    <Button
+        android:id="@+id/breaking_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Breaking news"
+        android:layout_below="@id/test_notification"/>
+
+    <Button
+        android:id="@+id/usb_debugging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USB Debugging"
+        android:layout_below="@id/breaking_news"/>
+    </RelativeLayout>
