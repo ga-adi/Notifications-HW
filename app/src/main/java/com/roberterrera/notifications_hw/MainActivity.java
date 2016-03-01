@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
                 builder.addAction(android.R.drawable.ic_menu_share, "Share", pendingIntent);
                 builder.addAction(android.R.drawable.ic_delete,"Delete",pendingIntent);
 
+                builder.setStyle(bigPictureStyle);
+
                 builder.setContentIntent(pendingIntent);
                 builder.setAutoCancel(true);
 
@@ -91,10 +93,13 @@ public class MainActivity extends AppCompatActivity {
                 PendingIntent pendingIntent= PendingIntent.getActivity(MainActivity.this,(int) System.currentTimeMillis(),intent,0);
 
                 NotificationCompat.InboxStyle inboxStyle= new NotificationCompat.InboxStyle();
+                inboxStyle.setBigContentTitle("Messages");
                 inboxStyle.addLine("Cheetah:Bannanas on Sale");
                 inboxStyle.addLine("George: Curious about your blog post");
                 inboxStyle.addLine("Nikko: Need a ride to evolve?");
                 inboxStyle.setSummaryText("+2 more");
+
+                builder.setStyle(inboxStyle);
 
                 builder.setContentIntent(pendingIntent);
                 builder.setAutoCancel(true);
