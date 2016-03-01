@@ -1,13 +1,16 @@
 package com.example.jafoole.notificationshw;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -69,8 +72,16 @@ public class MainActivity extends AppCompatActivity {
         fabTestTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this);
+                builder.setSmallIcon(android.R.drawable.ic_lock_idle_lock);
+                builder.setContentTitle("This is a title test");
+                builder.setContentText("This is some text used for the content of this notification");
+
+                Notification notification = builder.build();
+
+                NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                notificationManager.notify(4, notification);
+
             }
         });
 
@@ -78,8 +89,16 @@ public class MainActivity extends AppCompatActivity {
         fabInstagram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this);
+                builder.setSmallIcon(android.R.drawable.ic_menu_gallery);
+                builder.setContentTitle("Instagram");
+                builder.setContentText("Go behind the scenes at The Oscars");
+
+                Notification notification = builder.build();
+
+                NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                notificationManager.notify(5, notification);
+
             }
         });
 
@@ -88,8 +107,22 @@ public class MainActivity extends AppCompatActivity {
         fabUSBDebugging.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this);
+                builder.setSmallIcon(android.R.drawable.ic_menu_compass);
+                builder.setContentTitle("USB debugging connected");
+                builder.setContentText("Touch to disable USB debugging");
+
+
+
+                Intent notificationIntent = new Intent(MainActivity.this, USBActivity.class);
+                PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, (int) System.currentTimeMillis(), notificationIntent, 0);
+
+                builder.setContentIntent(pendingIntent);
+
+                Notification notification = builder.build();
+
+                NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                notificationManager.notify(5, notification);
             }
         });
 
