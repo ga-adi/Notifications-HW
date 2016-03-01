@@ -14,6 +14,7 @@ public class NatsNotifications {
 
     public static final int TEST_TITLE=10;
     public static final int DEBUG_USB=9;
+    public static final int GREG=8;
     private Activity mActivity=null;
     public NatsNotifications(Activity a){
         mActivity=a;
@@ -33,11 +34,11 @@ public class NatsNotifications {
         Notification notification = builder.build();
 
         NotificationManager notificationManager = (NotificationManager)mActivity.getSystemService(mActivity.NOTIFICATION_SERVICE);
-        notificationManager.notify(1,notification);
+        notificationManager.notify(TEST_TITLE,notification);
     }
     public void createNotificationUSBDebggingConnected(){
         NotificationCompat.Builder builder = new NotificationCompat.Builder(mActivity);
-        builder.setSmallIcon(R.drawable.usbdebug_icon);
+        builder.setSmallIcon(R.drawable.usdebug_b);
         builder.setContentTitle("USB DEBUGGING CONNECTED");
         builder.setContentText("Touch to Disable USB Debugging");
 
@@ -50,12 +51,13 @@ public class NatsNotifications {
         Notification notification = builder.build();
 
         NotificationManager notificationManager = (NotificationManager)mActivity.getSystemService(mActivity.NOTIFICATION_SERVICE);
-        notificationManager.notify(1,notification);
+        notificationManager.notify(DEBUG_USB,notification);
     }
 
     public void createNotificationUSBGregMiller(){
         NotificationCompat.Builder builder = new NotificationCompat.Builder(mActivity);
-        builder.setSmallIcon( R.drawable.gregmiller_icon);
+
+        builder.setSmallIcon( R.drawable.gregmiller_b);
        // builder.setContentTitle("Greg Miller");
         //builder.setContentText("Like");
 
@@ -68,11 +70,12 @@ public class NatsNotifications {
         NotificationCompat.BigTextStyle bigText = new NotificationCompat.BigTextStyle();
         bigText.setBigContentTitle("Greg Miller");
         bigText.bigText("Liked: “It’s cool that the @BatmanvSuperman movie cast the guy from Gigli.” @GameOverGreggy:”..Are you srsly making a joke right now, Tim?”");
-        bigText.setSummaryText("Reply");
+        //bigText.setSummaryText("Reply");
         builder.setStyle(bigText);
+        builder.addAction(android.R.drawable.ic_media_rew,"reply",pendingIntent);
         Notification notification = builder.build();
 
         NotificationManager notificationManager = (NotificationManager)mActivity.getSystemService(mActivity.NOTIFICATION_SERVICE);
-        notificationManager.notify(1,notification);
+        notificationManager.notify(GREG,notification);
     }
 }
